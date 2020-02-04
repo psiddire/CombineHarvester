@@ -18,9 +18,9 @@ int main(int argc, char* argv[]){
 
   printf ("Creating LFV ETau_had datacards \n ");
 
-  string folder="shapes_et_CutBased";
+  string folder="shapes_etDeep_CutBased";
   string lumi="";
-  string inputFile="shapesET";
+  string inputFile="shapesETDeep";
   string outputFile="HETau_etauhad_2016_m125.input";
   string dirInput="";
   bool binbybin=false;
@@ -210,11 +210,11 @@ int main(int argc, char* argv[]){
     .AddSyst(cb, "CMS_eff_emb_m", "lnN", SystMap<>::init(1.01732));
 
   cb.cp().process(ch::JoinStr({sig_procs, {"ggH_htt", "qqH_htt", "ggH_hww", "qqH_hww", "vH_htt", "Zothers", "TT", "T", "EWK", "Diboson"}}))
-    .AddSyst(cb, "CMS_eff_tau", "lnN", SystMap<>::init(1.03));
+    .AddSyst(cb, "CMS_eff_tau", "shape", SystMap<>::init(1.0));
   cb.cp().process({{"ZTauTau"}})
-    .AddSyst(cb, "CMS_eff_tau", "lnN", SystMap<>::init(1.015));
+    .AddSyst(cb, "CMS_eff_tau", "shape", SystMap<>::init(0.5));
   cb.cp().process({{"ZTauTau"}})
-    .AddSyst(cb, "CMS_eff_emb_tau", "lnN", SystMap<>::init(1.02598));
+    .AddSyst(cb, "CMS_eff_emb_tau", "shape", SystMap<>::init(0.866));
 
   cb.cp().process(ch::JoinStr({{"ZTauTau"}}))
     .AddSyst(cb, "CMS_tracking_tau", "shape", SystMap<>::init(1.0));
@@ -238,6 +238,8 @@ int main(int argc, char* argv[]){
     .AddSyst(cb, "CMS_scale_mfaketau_13TeV", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({sig_procs, {"ggH_htt", "qqH_htt", "ggH_hww", "qqH_hww", "vH_htt", "Zothers", "TT", "T", "EWK", "Diboson"}}))
     .AddSyst(cb, "CMS_scale_efaketau_13TeV", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, {"ggH_htt", "qqH_htt", "ggH_hww", "qqH_hww", "vH_htt", "Zothers", "TT", "T", "EWK", "Diboson"}}))
+    .AddSyst(cb, "CMS_scale_efaketaues_13TeV", "shape", SystMap<>::init(1.0));
 
   // Fake background Uncertainty
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
@@ -247,11 +249,15 @@ int main(int argc, char* argv[]){
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_TauFakeRate_p0_dm10_B_13TeV", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
+    .AddSyst(cb, "CMS_TauFakeRate_p0_dm11_B_13TeV", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_TauFakeRate_p0_dm0_E_13TeV", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_TauFakeRate_p0_dm1_E_13TeV", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_TauFakeRate_p0_dm10_E_13TeV", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({{"Fakes"}}))
+    .AddSyst(cb, "CMS_TauFakeRate_p0_dm11_E_13TeV", "shape", SystMap<>::init(1.0));
 
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_TauFakeRate_p1_dm0_B_13TeV", "shape", SystMap<>::init(1.0));
@@ -260,11 +266,15 @@ int main(int argc, char* argv[]){
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_TauFakeRate_p1_dm10_B_13TeV", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
+    .AddSyst(cb, "CMS_TauFakeRate_p1_dm11_B_13TeV", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_TauFakeRate_p1_dm0_E_13TeV", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_TauFakeRate_p1_dm1_E_13TeV", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_TauFakeRate_p1_dm10_E_13TeV", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({{"Fakes"}}))
+    .AddSyst(cb, "CMS_TauFakeRate_p1_dm11_E_13TeV", "shape", SystMap<>::init(1.0));
 
   cb.cp().process(ch::JoinStr({{"Fakes"}}))
     .AddSyst(cb, "CMS_EleFakeRate_p0_13TeV", "shape", SystMap<>::init(1.0));
@@ -295,6 +305,13 @@ int main(int argc, char* argv[]){
     .AddSyst(cb, "CMS_scale_t_3prong_13TeV", "shape", SystMap<>::init(0.5));
   cb.cp().process({{"ZTauTau"}})
     .AddSyst(cb, "CMS_scale_emb_t_3prong_13TeV", "shape", SystMap<>::init(0.866));
+
+  cb.cp().process(ch::JoinStr({sig_procs, {"ggH_htt", "qqH_htt", "ggH_hww", "qqH_hww", "vH_htt", "TT", "T", "EWK", "Diboson"}}))
+    .AddSyst(cb, "CMS_scale_t_3prong1pizero_13TeV", "shape", SystMap<>::init(1.0));
+  cb.cp().process({{"ZTauTau"}})
+    .AddSyst(cb, "CMS_scale_t_3prong1pizero_13TeV", "shape", SystMap<>::init(0.5));
+  cb.cp().process({{"ZTauTau"}})
+    .AddSyst(cb, "CMS_scale_emb_t_3prong1pizero_13TeV", "shape", SystMap<>::init(0.866));
 
   // JES
   TString JESNAMES[27] = {"CMS_Jes_JetAbsoluteFlavMap_13TeV", "CMS_Jes_JetAbsoluteMPFBias_13TeV", "CMS_Jes_JetAbsoluteScale_13TeV", "CMS_Jes_JetAbsoluteStat_13TeV", "CMS_Jes_JetFlavorQCD_13TeV", "CMS_Jes_JetFragmentation_13TeV", "CMS_Jes_JetPileUpDataMC_13TeV", "CMS_Jes_JetPileUpPtBB_13TeV", "CMS_Jes_JetPileUpPtEC1_13TeV", "CMS_Jes_JetPileUpPtEC2_13TeV", "CMS_Jes_JetPileUpPtHF_13TeV", "CMS_Jes_JetPileUpPtRef_13TeV", "CMS_Jes_JetRelativeFSR_13TeV", "CMS_Jes_JetRelativeJEREC1_13TeV", "CMS_Jes_JetRelativeJEREC2_13TeV", "CMS_Jes_JetRelativeJERHF_13TeV", "CMS_Jes_JetRelativePtBB_13TeV", "CMS_Jes_JetRelativePtEC1_13TeV", "CMS_Jes_JetRelativePtEC2_13TeV", "CMS_Jes_JetRelativePtHF_13TeV", "CMS_Jes_JetRelativeStatEC_13TeV", "CMS_Jes_JetRelativeStatFSR_13TeV", "CMS_Jes_JetRelativeStatHF_13TeV", "CMS_Jes_JetSinglePionECAL_13TeV", "CMS_Jes_JetSinglePionHCAL_13TeV", "CMS_Jes_JetTimePtEta_13TeV", "CMS_Jes_JetRelativeBal_13TeV"};
