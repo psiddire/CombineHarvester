@@ -1,0 +1,15 @@
+cp ~/CMSSW_10_2_13/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.0Jet.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2016_0Jet.mH125.root
+cp ~/CMSSW_10_2_13/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.1Jet.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2016_1Jet.mH125.root
+cp ~/CMSSW_10_2_13/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.2JetGG.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2016_2JetGG.mH125.root
+cp ~/CMSSW_10_2_13/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.2JetVBF.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2016_2JetVBF.mH125.root
+cp ~/CMSSW_10_2_13/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.Comb.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2016_Comb.mH125.root
+cp ~/CMSSW_10_2_14/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.0Jet.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2017_0Jet.mH125.root
+cp ~/CMSSW_10_2_14/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.1Jet.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2017_1Jet.mH125.root
+cp ~/CMSSW_10_2_14/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.2JetGG.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2017_2JetGG.mH125.root
+cp ~/CMSSW_10_2_14/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.2JetVBF.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2017_2JetVBF.mH125.root
+cp ~/CMSSW_10_2_14/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.Comb.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2017_Comb.mH125.root
+cp ~/CMSSW_10_2_15/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.0Jet.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2018_0Jet.mH125.root
+cp ~/CMSSW_10_2_15/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.1Jet.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2018_1Jet.mH125.root
+cp ~/CMSSW_10_2_15/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.2JetGG.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2018_2JetGG.mH125.root
+cp ~/CMSSW_10_2_15/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.2JetVBF.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2018_2JetVBF.mH125.root
+cp ~/CMSSW_10_2_15/src/CombineHarvester/CombineTools/ETau/shapes_et_CutBased/higgsCombineTest.AsymptoticLimits.Comb.mH125.root Combine/higgsCombineTest.AsymptoticLimits.2018_Comb.mH125.root
