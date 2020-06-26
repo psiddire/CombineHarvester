@@ -202,6 +202,12 @@ int main(int argc, char* argv[]){
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
     .AddSyst(cb, "CMS_lumi_ghosts-satellites_13TeV", "lnN", SystMap<>::init(1.004));
 
+  // PS Uncertainties
+  cb.cp().process({"LFVGG", "LFVVBF"})
+    .AddSyst(cb, "CMS_PartonShower_ISR_2018_13TeV", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"LFVGG", "LFVVBF"})
+    .AddSyst(cb, "CMS_PartonShower_FSR_2018_13TeV", "shape", SystMap<>::init(1.0));
+
   // Pileup
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
     .AddSyst(cb, "CMS_Pileup_13TeV", "shape", SystMap<>::init(1.0));

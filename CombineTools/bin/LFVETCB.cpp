@@ -33,7 +33,7 @@ int main(int argc, char* argv[]){
  string basepath = "$CMSSW_BASE/src/CombineHarvester/CombineTools/";
  string folder = "shapes_et_BDT";
  string label = "h#rightarrow e#tau_{h} M_{col} fit";
- string lumi = "136.7";
+ string lumi = "137";
 
  if (argc > 1)
    {
