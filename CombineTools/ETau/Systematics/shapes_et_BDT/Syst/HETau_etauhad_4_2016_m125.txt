@@ -1,0 +1,17 @@
+# Datacard produced by CombineHarvester with git status: analysis-HIG-16-006-freeze-080416-809-g89e3079-dirty
+imax    1 number of bins
+jmax    12 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * HETau_etauhad_4_2016 HETau_etauhad_2016_m125.input.root HETau_etauhad_4_2016/$PROCESS HETau_etauhad_4_2016/$PROCESS_$SYSTEMATIC
+shapes LFVGG HETau_etauhad_4_2016 HETau_etauhad_2016_m125.input.root HETau_etauhad_4_2016/LFVGG$MASS HETau_etauhad_4_2016/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF HETau_etauhad_4_2016 HETau_etauhad_2016_m125.input.root HETau_etauhad_4_2016/LFVVBF$MASS HETau_etauhad_4_2016/LFVVBF$MASS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          HETau_etauhad_4_2016 
+observation  635.0           
+--------------------------------------------------------------------------------
+bin                                                      HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 HETau_etauhad_4_2016 
+process                                                  ggH_htt         qqH_htt         ggH_hww         qqH_hww         Zothers         EWK             TT              T               Diboson         Fakes           ZTauTau         LFVGG           LFVVBF          
+process                                                  1               2               3               4               5               6               7               8               9               10              11              -1              0               
+rate                                                     5.46653         12.4807         0.404213        1.1519          23.6063         32.4216         77.1506         14.6442         16.4055         224.065         246.66          8.20956         16.8958         
+--------------------------------------------------------------------------------

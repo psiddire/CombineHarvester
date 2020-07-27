@@ -1,0 +1,26 @@
+Combination of Name1=HMuTau_mutaue_1_2016_m125.txt  Name2=HMuTau_mutaue_2_2016_m125.txt  Name3=HMuTau_mutaue_3_2016_m125.txt  Name4=HMuTau_mutaue_4_2016_m125.txt
+imax 4 number of bins
+jmax 13 number of processes minus 1
+kmax 0 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes *       Name1   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_1_2016/$PROCESS HMuTau_mutaue_1_2016/$PROCESS_$SYSTEMATIC
+shapes LFVGG   Name1   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_1_2016/LFVGG$MASS HMuTau_mutaue_1_2016/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF  Name1   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_1_2016/LFVVBF$MASS HMuTau_mutaue_1_2016/LFVVBF$MASS_$SYSTEMATIC
+shapes *       Name2   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_2_2016/$PROCESS HMuTau_mutaue_2_2016/$PROCESS_$SYSTEMATIC
+shapes LFVGG   Name2   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_2_2016/LFVGG$MASS HMuTau_mutaue_2_2016/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF  Name2   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_2_2016/LFVVBF$MASS HMuTau_mutaue_2_2016/LFVVBF$MASS_$SYSTEMATIC
+shapes *       Name3   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_3_2016/$PROCESS HMuTau_mutaue_3_2016/$PROCESS_$SYSTEMATIC
+shapes LFVGG   Name3   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_3_2016/LFVGG$MASS HMuTau_mutaue_3_2016/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF  Name3   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_3_2016/LFVVBF$MASS HMuTau_mutaue_3_2016/LFVVBF$MASS_$SYSTEMATIC
+shapes *       Name4   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_4_2016/$PROCESS HMuTau_mutaue_4_2016/$PROCESS_$SYSTEMATIC
+shapes LFVGG   Name4   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_4_2016/LFVGG$MASS HMuTau_mutaue_4_2016/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF  Name4   HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_4_2016/LFVVBF$MASS HMuTau_mutaue_4_2016/LFVVBF$MASS_$SYSTEMATIC
+----------------------------------------------------------------------------------------------------------------------------------
+bin          Name1  Name2  Name3  Name4
+observation  79049  40516  23824  1607 
+----------------------------------------------------------------------------------------------------------------------------------
+bin          Name1    Name1    Name1    Name1    Name1    Name1    Name1    Name1    Name1    Name1    Name1    Name1    Name1    Name1    Name2    Name2    Name2    Name2    Name2    Name2    Name2    Name2    Name2    Name2    Name2    Name2    Name2    Name2    Name3    Name3    Name3    Name3    Name3    Name3    Name3    Name3    Name3    Name3    Name3    Name3    Name3    Name3    Name4    Name4    Name4    Name4    Name4    Name4    Name4    Name4    Name4    Name4    Name4    Name4    Name4    Name4  
+process      LFVGG    LFVVBF   qqH_htt  EWK      Diboson  W        qqH_hww  Zothers  TT       ZTauTau  ggH_htt  T        ggH_hww  QCD      LFVGG    LFVVBF   qqH_htt  EWK      Diboson  W        qqH_hww  Zothers  TT       ZTauTau  ggH_htt  T        ggH_hww  QCD      LFVGG    LFVVBF   qqH_htt  EWK      Diboson  W        qqH_hww  Zothers  TT       ZTauTau  ggH_htt  T        ggH_hww  QCD      LFVGG    LFVVBF   qqH_htt  EWK      Diboson  W        qqH_hww  Zothers  TT       ZTauTau  ggH_htt  T        ggH_hww  QCD    
+process      -1       0        1        2        3        4        5        6        7        8        9        10       11       12       -1       0        1        2        3        4        5        6        7        8        9        10       11       12       -1       0        1        2        3        4        5        6        7        8        9        10       11       12       -1       0        1        2        3        4        5        6        7        8        9        10       11       12     
+rate         304.633  3.13746  2.51078  11.8152  16579.5  2476.62  6.4047   748.983  3832.73  55059    225.669  1868.24  553.565  2044.95  134.951  14.7253  12.166   46.1469  6752.89  1021.53  40.0102  186.857  13197.1  13884    102.179  3798.42  363.335  1307.99  43.3071  7.66758  6.88987  36.2973  1928.87  284.306  22.6965  54.6821  14996.2  4143.21  35.1464  1731.5   126.963  557.881  4.9463   11.345   10.5306  9.1098   182.383  20.4879  31.7732  2.91807  794.768  190.165  4.10802  113.068  15.9495  184.028
+----------------------------------------------------------------------------------------------------------------------------------

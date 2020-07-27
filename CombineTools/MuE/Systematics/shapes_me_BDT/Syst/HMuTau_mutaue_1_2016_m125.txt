@@ -1,0 +1,17 @@
+# Datacard produced by CombineHarvester with git status: analysis-HIG-16-006-freeze-080416-809-g89e3079-dirty
+imax    1 number of bins
+jmax    13 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * HMuTau_mutaue_1_2016 HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_1_2016/$PROCESS HMuTau_mutaue_1_2016/$PROCESS_$SYSTEMATIC
+shapes LFVGG HMuTau_mutaue_1_2016 HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_1_2016/LFVGG$MASS HMuTau_mutaue_1_2016/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF HMuTau_mutaue_1_2016 HMuTau_mutaue_2016_m125.input.root HMuTau_mutaue_1_2016/LFVVBF$MASS HMuTau_mutaue_1_2016/LFVVBF$MASS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          HMuTau_mutaue_1_2016 
+observation  79049.0         
+--------------------------------------------------------------------------------
+bin                                         HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 HMuTau_mutaue_1_2016 
+process                                     ggH_htt         qqH_htt         ggH_hww         qqH_hww         Zothers         EWK             W               TT              T               Diboson         QCD             ZTauTau         LFVGG           LFVVBF          
+process                                     1               2               3               4               5               6               7               8               9               10              11              12              -1              0               
+rate                                        225.669         2.51078         553.565         6.4047          748.983         11.8152         2476.62         3832.73         1868.24         16579.5         2044.95         55059           304.633         3.13746         
+--------------------------------------------------------------------------------

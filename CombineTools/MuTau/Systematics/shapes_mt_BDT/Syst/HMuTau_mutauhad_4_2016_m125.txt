@@ -1,0 +1,17 @@
+# Datacard produced by CombineHarvester with git status: analysis-HIG-16-006-freeze-080416-809-g89e3079-dirty
+imax    1 number of bins
+jmax    12 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * HMuTau_mutauhad_4_2016 HMuTau_mutauhad_2016_m125.input.root HMuTau_mutauhad_4_2016/$PROCESS HMuTau_mutauhad_4_2016/$PROCESS_$SYSTEMATIC
+shapes LFVGG HMuTau_mutauhad_4_2016 HMuTau_mutauhad_2016_m125.input.root HMuTau_mutauhad_4_2016/LFVGG$MASS HMuTau_mutauhad_4_2016/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF HMuTau_mutauhad_4_2016 HMuTau_mutauhad_2016_m125.input.root HMuTau_mutauhad_4_2016/LFVVBF$MASS HMuTau_mutauhad_4_2016/LFVVBF$MASS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          HMuTau_mutauhad_4_2016 
+observation  1080.0          
+--------------------------------------------------------------------------------
+bin                                                      HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 HMuTau_mutauhad_4_2016 
+process                                                  ggH_htt         qqH_htt         ggH_hww         qqH_hww         Zothers         EWK             TT              T               Diboson         Fakes           ZTauTau         LFVGG           LFVVBF          
+process                                                  1               2               3               4               5               6               7               8               9               10              11              -1              0               
+rate                                                     9.73497         23.8999         1.15201         2.23994         16.4127         37.8896         112.272         17.4698         31.8214         380.639         455.861         12.9992         30.1519         
+--------------------------------------------------------------------------------

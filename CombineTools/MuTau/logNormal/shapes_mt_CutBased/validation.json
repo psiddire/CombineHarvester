@@ -1,0 +1,178 @@
+{
+    "largeNormEff": {
+        "CMS_eff_b_2016": {
+            "Name2": {
+                "TT": {
+                    "value_d": 0.893164,
+                    "value_u": 1.11218
+                }
+            },
+            "Name3": {
+                "TT": {
+                    "value_d": 0.864121,
+                    "value_u": 1.14606
+                }
+            },
+            "Name4": {
+                "TT": {
+                    "value_d": 0.902688,
+                    "value_u": 1.10197
+                }
+            }
+        },
+        "CMS_res_j_2016": {
+            "Name4": {
+                "Diboson": {
+                    "value_d": 1.0365,
+                    "value_u": 0.890205
+                }
+            }
+        },
+        "norm_EWK": {
+            "Name1": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name2": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name3": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name4": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes": {
+            "Name1": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            },
+            "Name2": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            },
+            "Name3": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            },
+            "Name4": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            }
+        },
+        "norm_Fakes_mutauh_0jet": {
+            "Name1": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes_mutauh_1jet": {
+            "Name2": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes_mutauh_2jet_gg": {
+            "Name3": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes_mutauh_2jet_vbf": {
+            "Name4": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        }
+    },
+    "smallShapeEff": {
+        "CMS_scale_t_3prong1pizero_2016": {
+            "Name4": {
+                "ZTauTau": {
+                    "diff_d": 0.0,
+                    "diff_u": 0.0
+                }
+            }
+        },
+        "CMS_scale_t_3prong_2016": {
+            "Name4": {
+                "ZTauTau": {
+                    "diff_d": 2.975513529566169e-07,
+                    "diff_u": 0.0
+                }
+            }
+        },
+        "CMS_scale_t_emb_3prong1pizero_2016": {
+            "Name4": {
+                "ZTauTau": {
+                    "diff_d": 0.0,
+                    "diff_u": 0.0
+                }
+            }
+        },
+        "CMS_scale_t_emb_3prong_2016": {
+            "Name4": {
+                "ZTauTau": {
+                    "diff_d": 2.975513529566169e-07,
+                    "diff_u": 0.0
+                }
+            }
+        }
+    },
+    "uncertVarySameDirect": {
+        "CMS_scale_m_eta1p2to2p1": {
+            "Name1": {
+                "LFVGG": {
+                    "value_d": 0.9999999820913867,
+                    "value_u": 0.9999999998787227
+                }
+            }
+        },
+        "CMS_scale_m_etaLt1p2": {
+            "Name1": {
+                "EWK": {
+                    "value_d": 1.0000000021126276,
+                    "value_u": 1.0000000021126276
+                },
+                "LFVVBF": {
+                    "value_d": 1.0000000324965201,
+                    "value_u": 1.00000002437239
+                }
+            },
+            "Name4": {
+                "qqH_hww": {
+                    "value_d": 0.9999999696886628,
+                    "value_u": 0.9999999732547025
+                }
+            }
+        }
+    }
+}
