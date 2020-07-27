@@ -1,0 +1,17 @@
+# Datacard produced by CombineHarvester with git status: analysis-HIG-16-006-freeze-080416-810-gf0cf0d5-dirty
+imax    1 number of bins
+jmax    13 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * HMuTau_mutaue_4_2017 HMuTau_mutaue_2017_m125.input.root HMuTau_mutaue_4_2017/$PROCESS HMuTau_mutaue_4_2017/$PROCESS_$SYSTEMATIC
+shapes LFVGG HMuTau_mutaue_4_2017 HMuTau_mutaue_2017_m125.input.root HMuTau_mutaue_4_2017/LFVGG$MASS HMuTau_mutaue_4_2017/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF HMuTau_mutaue_4_2017 HMuTau_mutaue_2017_m125.input.root HMuTau_mutaue_4_2017/LFVVBF$MASS HMuTau_mutaue_4_2017/LFVVBF$MASS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          HMuTau_mutaue_4_2017 
+observation  1996.0          
+--------------------------------------------------------------------------------
+bin                                         HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 HMuTau_mutaue_4_2017 
+process                                     ggH_htt         qqH_htt         ggH_hww         qqH_hww         Zothers         EWK             W               TT              T               Diboson         QCD             ZTauTau         LFVGG           LFVVBF          
+process                                     1               2               3               4               5               6               7               8               9               10              11              12              -1              0               
+rate                                        3.94559         10.4268         13.0904         32.4512         5.97325         19.4093         28.8761         821.356         134.97          142.142         278.034         330.102         5.06182         12.2929         
+--------------------------------------------------------------------------------

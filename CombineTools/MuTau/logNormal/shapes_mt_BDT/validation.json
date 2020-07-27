@@ -1,0 +1,358 @@
+{
+    "largeNormEff": {
+        "CMS_eff_b_2017": {
+            "Name2": {
+                "TT": {
+                    "value_d": 0.890765,
+                    "value_u": 1.11436
+                }
+            },
+            "Name3": {
+                "T": {
+                    "value_d": 0.900375,
+                    "value_u": 1.10293
+                },
+                "TT": {
+                    "value_d": 0.859918,
+                    "value_u": 1.15041
+                }
+            },
+            "Name4": {
+                "TT": {
+                    "value_d": 0.895558,
+                    "value_u": 1.11101
+                }
+            }
+        },
+        "norm_EWK": {
+            "Name1": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name2": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name3": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name4": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes": {
+            "Name1": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            },
+            "Name2": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            },
+            "Name3": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            },
+            "Name4": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            }
+        },
+        "norm_Fakes_mutauh_0jet": {
+            "Name1": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes_mutauh_1jet": {
+            "Name2": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes_mutauh_2jet_gg": {
+            "Name3": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes_mutauh_2jet_vbf": {
+            "Name4": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        }
+    },
+    "uncertVarySameDirect": {
+        "CMS_scale_m_eta1p2to2p1": {
+            "Name1": {
+                "EWK": {
+                    "value_d": 1.0000000276205672,
+                    "value_u": 1.000000002301714
+                },
+                "LFVVBF": {
+                    "value_d": 0.9999999743158099,
+                    "value_u": 0.9999999853952645
+                },
+                "Zothers": {
+                    "value_d": 1.0000000086075278,
+                    "value_u": 1.0000000102628217
+                }
+            },
+            "Name2": {
+                "LFVGG": {
+                    "value_d": 0.9999999966615902,
+                    "value_u": 0.9999999853312298
+                },
+                "Zothers": {
+                    "value_d": 1.0000000069993296,
+                    "value_u": 1.0000000180509026
+                }
+            },
+            "Name3": {
+                "Diboson": {
+                    "value_d": 0.9999999924878865,
+                    "value_u": 0.999999991861877
+                },
+                "EWK": {
+                    "value_d": 0.9999999899463857,
+                    "value_u": 0.9999999946774983
+                },
+                "LFVGG": {
+                    "value_d": 1.0000000516767222,
+                    "value_u": 1.000000048164712
+                }
+            },
+            "Name4": {
+                "Diboson": {
+                    "value_d": 0.9999999581929835,
+                    "value_u": 0.9999999606843404
+                },
+                "EWK": {
+                    "value_d": 0.9999999803229122,
+                    "value_u": 0.9999999901614561
+                },
+                "LFVGG": {
+                    "value_d": 1.0000000261454245,
+                    "value_u": 1.0000000382125436
+                },
+                "qqH_htt": {
+                    "value_d": 1.000000008035904,
+                    "value_u": 1.000000003443959
+                },
+                "qqH_hww": {
+                    "value_d": 1.0000000046356097,
+                    "value_u": 1.0000000264891977
+                }
+            }
+        },
+        "CMS_scale_m_etaLt1p2": {
+            "Name1": {
+                "EWK": {
+                    "value_d": 1.0000000207154254,
+                    "value_u": 1.0000000046034279
+                },
+                "T": {
+                    "value_d": 0.9999999986073612,
+                    "value_u": 0.9999999972147224
+                },
+                "Zothers": {
+                    "value_d": 1.0000000192014082,
+                    "value_u": 1.0000000201945844
+                }
+            },
+            "Name2": {
+                "EWK": {
+                    "value_d": 0.999999959434762,
+                    "value_u": 0.99999997693894
+                },
+                "TT": {
+                    "value_d": 0.9999999895158759,
+                    "value_u": 0.9999999851474909
+                },
+                "Zothers": {
+                    "value_d": 1.0000000084728726,
+                    "value_u": 1.0000000224715317
+                },
+                "qqH_hww": {
+                    "value_d": 1.0000000593430787,
+                    "value_u": 1.0000000155390454
+                }
+            },
+            "Name3": {
+                "LFVGG": {
+                    "value_d": 1.0000000956325965,
+                    "value_u": 1.0000000042227741
+                },
+                "Zothers": {
+                    "value_d": 0.9999999930335809,
+                    "value_u": 0.9999999987808766
+                },
+                "ggH_htt": {
+                    "value_d": 1.0000000062691683,
+                    "value_u": 1.000000011284503
+                }
+            },
+            "Name4": {
+                "Diboson": {
+                    "value_d": 0.9999999693187691,
+                    "value_u": 0.9999999539269614
+                },
+                "EWK": {
+                    "value_d": 0.9999999901614561,
+                    "value_u": 0.9999999827825482
+                },
+                "T": {
+                    "value_d": 0.9999999823094275,
+                    "value_u": 0.9999999896804994
+                },
+                "Zothers": {
+                    "value_d": 0.9999999910234825,
+                    "value_u": 0.9999999948705615
+                },
+                "qqH_hww": {
+                    "value_d": 1.0000000079467593,
+                    "value_u": 1.000000022515818
+                }
+            }
+        },
+        "CMS_scale_t_1prong1pizero_2017": {
+            "Name4": {
+                "ZTauTau": {
+                    "value_d": 0.9999999812944244,
+                    "value_u": 0.9999999625888486
+                }
+            }
+        },
+        "CMS_scale_t_1prong_2017": {
+            "Name1": {
+                "ZTauTau": {
+                    "value_d": 0.999999980363569,
+                    "value_u": 0.9999999842908551
+                }
+            },
+            "Name2": {
+                "ZTauTau": {
+                    "value_d": 0.9999999989392357,
+                    "value_u": 0.9999999978784715
+                }
+            },
+            "Name4": {
+                "ZTauTau": {
+                    "value_d": 0.999999939822194,
+                    "value_u": 0.9999999822789283
+                }
+            }
+        },
+        "CMS_scale_t_3prong1pizero_2017": {
+            "Name1": {
+                "ZTauTau": {
+                    "value_d": 0.9999999465889076,
+                    "value_u": 0.9999999787926545
+                }
+            },
+            "Name2": {
+                "ZTauTau": {
+                    "value_d": 1.0000000297013987,
+                    "value_u": 1.0000000001767941
+                }
+            }
+        },
+        "CMS_scale_t_3prong_2017": {
+            "Name1": {
+                "ZTauTau": {
+                    "value_d": 0.9999999929308848,
+                    "value_u": 0.9999999795781117
+                }
+            },
+            "Name2": {
+                "ZTauTau": {
+                    "value_d": 1.0000000120219947,
+                    "value_u": 1.0000000275798702
+                }
+            }
+        },
+        "CMS_scale_t_emb_1prong1pizero_2017": {
+            "Name4": {
+                "ZTauTau": {
+                    "value_d": 0.9999999812944244,
+                    "value_u": 0.9999999625888486
+                }
+            }
+        },
+        "CMS_scale_t_emb_1prong_2017": {
+            "Name1": {
+                "ZTauTau": {
+                    "value_d": 0.999999980363569,
+                    "value_u": 0.9999999842908551
+                }
+            },
+            "Name2": {
+                "ZTauTau": {
+                    "value_d": 0.9999999989392357,
+                    "value_u": 0.9999999978784715
+                }
+            },
+            "Name4": {
+                "ZTauTau": {
+                    "value_d": 0.999999939822194,
+                    "value_u": 0.9999999822789283
+                }
+            }
+        },
+        "CMS_scale_t_emb_3prong1pizero_2017": {
+            "Name1": {
+                "ZTauTau": {
+                    "value_d": 0.9999999465889076,
+                    "value_u": 0.9999999787926545
+                }
+            },
+            "Name2": {
+                "ZTauTau": {
+                    "value_d": 1.0000000297013987,
+                    "value_u": 1.0000000001767941
+                }
+            }
+        },
+        "CMS_scale_t_emb_3prong_2017": {
+            "Name1": {
+                "ZTauTau": {
+                    "value_d": 0.9999999929308848,
+                    "value_u": 0.9999999795781117
+                }
+            },
+            "Name2": {
+                "ZTauTau": {
+                    "value_d": 1.0000000120219947,
+                    "value_u": 1.0000000275798702
+                }
+            }
+        }
+    }
+}

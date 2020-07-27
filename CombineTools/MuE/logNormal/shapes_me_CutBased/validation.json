@@ -1,0 +1,179 @@
+{
+    "emptyProcessShape": {
+        "Name4": [
+            "Zothers"
+        ]
+    },
+    "largeNormEff": {
+        "CMS_dyShape_2017": {
+            "Name1": {
+                "Zothers": {
+                    "value_d": 1.166383823649257,
+                    "value_u": 0.8336161677823333
+                }
+            },
+            "Name3": {
+                "Zothers": {
+                    "value_d": 1.826520885889956,
+                    "value_u": 0.17347911554956305
+                }
+            }
+        },
+        "CMS_eff_b_2017": {
+            "Name2": {
+                "TT": {
+                    "value_d": 0.889395,
+                    "value_u": 1.11586
+                }
+            },
+            "Name3": {
+                "T": {
+                    "value_d": 0.897498,
+                    "value_u": 1.10612
+                },
+                "TT": {
+                    "value_d": 0.858067,
+                    "value_u": 1.15271
+                }
+            },
+            "Name4": {
+                "TT": {
+                    "value_d": 0.892623,
+                    "value_u": 1.11256
+                }
+            }
+        },
+        "CMS_pileup": {
+            "Name3": {
+                "Zothers": {
+                    "value_d": 0.88824,
+                    "value_u": 1.14243
+                }
+            },
+            "Name4": {
+                "W": {
+                    "value_d": 1.11459,
+                    "value_u": 0.647826
+                }
+            }
+        },
+        "CMS_qcd_extrapolation": {
+            "Name1": {
+                "QCD": {
+                    "value_d": 1.11601,
+                    "value_u": 0.897957
+                }
+            },
+            "Name2": {
+                "QCD": {
+                    "value_d": 1.13652,
+                    "value_u": 0.88566
+                }
+            }
+        },
+        "CMS_scale_j_RelativeBal": {
+            "Name4": {
+                "Diboson": {
+                    "value_d": 0.938685,
+                    "value_u": 1.12248
+                }
+            }
+        },
+        "CMS_scale_met_2Jet_2017": {
+            "Name3": {
+                "W": {
+                    "value_d": 1.0,
+                    "value_u": 1.15982
+                }
+            }
+        },
+        "CMS_scale_met_hcal": {
+            "Name4": {
+                "Diboson": {
+                    "value_d": 1.05045,
+                    "value_u": 0.854986
+                }
+            }
+        },
+        "CMS_scale_met_hf": {
+            "Name4": {
+                "Diboson": {
+                    "value_d": 0.93382,
+                    "value_u": 1.14837
+                }
+            }
+        },
+        "norm_EWK": {
+            "Name1": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name2": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name3": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name4": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_W": {
+            "Name1": {
+                "W": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name2": {
+                "W": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name3": {
+                "W": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name4": {
+                "W": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        }
+    },
+    "smallShapeEff": {
+        "CMS_scale_e": {
+            "Name3": {
+                "Diboson": {
+                    "diff_d": 0.0001487406656351626,
+                    "diff_u": 0.00014843130191914374
+                }
+            }
+        }
+    },
+    "uncertVarySameDirect": {
+        "CMS_scale_e": {
+            "Name4": {
+                "Diboson": {
+                    "value_d": 0.999999994671568,
+                    "value_u": 0.9999845845304944
+                }
+            }
+        }
+    }
+}

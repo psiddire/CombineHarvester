@@ -151,5 +151,5 @@ norm_Zothers_etaumu_2jet_vbf   lnN                                    -         
 norm_w                  lnN                                           -         -         -         -         -         -         -         -         -         -         -         -         -         -         -         -         -         -         1.1       -         -         -         -         -         -         -         -       
 pdf_Higgs_gg            lnN                                           1.032     -         -         -         -         -         -         -         -         -         1.032     -         1.032     1.032     -         -         -         -         -         -         -         -         -         1.032     -         1.032     -       
 pdf_Higgs_qq            lnN                                           -         1.021     1.021     -         -         1.021     -         -         -         -         -         -         -         -         1.021     1.021     -         -         -         1.021     -         -         -         -         -         -         -       
-Name2 autoMCStats 0 0 1
+Name2 autoMCStats 10 0 1
 Name1 autoMCStats 10 0 1
