@@ -93,7 +93,7 @@ int main(int argc, char* argv[]){
 		  ({"LFVGG", "ggH_htt", "ggH_hww"}, {4}, 1.032)
 		  );
 
-  cb.cp().AddSyst(cb, "pdf_Higgs_qq", "lnN", SystMap<process,bin_id>::init
+  cb.cp().AddSyst(cb, "pdf_Higgs_qqbar", "lnN", SystMap<process,bin_id>::init
 		  ({"LFVVBF", "qqH_htt", "qqH_hww"}, {1}, 1.021)
 		  ({"LFVVBF", "qqH_htt", "qqH_hww"}, {2}, 1.021)
 		  ({"LFVVBF", "qqH_htt", "qqH_hww"}, {3}, 1.021)
@@ -101,14 +101,14 @@ int main(int argc, char* argv[]){
 		  );
 
   // Acceptance
-  cb.cp().AddSyst(cb,"acceptance_pdf_gg", "lnN", SystMap<process,bin_id>::init
+  cb.cp().AddSyst(cb,"pdf_Higgs_gg_ACCEPT", "lnN", SystMap<process,bin_id>::init
                   ({"LFVGG", "ggH_htt", "ggH_hww"}, {1}, 0.999)
                   ({"LFVGG", "ggH_htt", "ggH_hww"}, {2}, 1.001)
                   ({"LFVGG", "ggH_htt", "ggH_hww"}, {3}, 1.003)
                   ({"LFVGG", "ggH_htt", "ggH_hww"}, {4}, 1.005)
                   );
 
-  cb.cp().AddSyst(cb,"acceptance_pdf_vbf", "lnN", SystMap<process,bin_id>::init
+  cb.cp().AddSyst(cb,"pdf_Higgs_qqbar_ACCEPT", "lnN", SystMap<process,bin_id>::init
                   ({"LFVVBF"}, {1}, 1.003)
                   ({"LFVVBF"}, {2}, 1.001)
                   ({"LFVVBF"}, {3}, 1.000)
@@ -123,7 +123,7 @@ int main(int argc, char* argv[]){
                   ({"qqH_hww"}, {4}, 0.999)
                   );
 
-  cb.cp().AddSyst(cb,"acceptance_scale_gg", "lnN", SystMap<process,bin_id>::init
+  cb.cp().AddSyst(cb,"QCDscale_ggH_ACCEPT", "lnN", SystMap<process,bin_id>::init
                   ({"LFVGG"}, {1}, 1.020)
                   ({"LFVGG"}, {2}, 0.979)
                   ({"LFVGG"}, {3}, 0.944)
@@ -138,7 +138,7 @@ int main(int argc, char* argv[]){
                   ({"ggH_hww"}, {4}, 0.920)
                   );
 
-  cb.cp().AddSyst(cb,"acceptance_scale_vbf", "lnN", SystMap<process,bin_id>::init
+  cb.cp().AddSyst(cb,"QCDscale_qqH_ACCEPT", "lnN", SystMap<process,bin_id>::init
                   ({"LFVVBF"}, {1}, 0.996)
                   ({"LFVVBF"}, {2}, 0.999)
                   ({"LFVVBF"}, {3}, 1.015)
@@ -167,7 +167,7 @@ int main(int argc, char* argv[]){
   cb.cp().process({"Zothers"}).AddSyst(cb, "norm_Zothers", "lnN", SystMap<>::init(1.04));
   cb.cp().process({"Zothers"}).AddSyst(cb, "norm_Zothers_mutaue_$BIN", "lnN", SystMap<>::init(1.05));
 
-  cb.cp().process({"W"}).AddSyst(cb, "norm_w", "lnN", SystMap<>::init(1.10));
+  cb.cp().process({"W"}).AddSyst(cb, "norm_W", "lnN", SystMap<>::init(1.10));
 
   cb.cp().process({"Diboson"}).AddSyst(cb, "norm_Diboson", "lnN", SystMap<>::init(1.05));
   cb.cp().process({"Diboson"}).AddSyst(cb, "norm_Diboson_mutaue_$BIN", "lnN", SystMap<>::init(1.05));
@@ -183,27 +183,25 @@ int main(int argc, char* argv[]){
 
   // Luminosity
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_lumi_2018_13TeV", "lnN", SystMap<>::init(1.022));
+    .AddSyst(cb, "CMS_lumi_13TeV_2018", "lnN", SystMap<>::init(1.015));
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_lumi_xy-factorization_13TeV", "lnN", SystMap<>::init(1.009));
+    .AddSyst(cb, "CMS_lumi_13TeV_XY", "lnN", SystMap<>::init(1.020));
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_lumi_beam-beam-deflection_13TeV", "lnN", SystMap<>::init(1.004));
+    .AddSyst(cb, "CMS_lumi_13TeV_LS", "lnN", SystMap<>::init(1.002));
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_lumi_dynamic-beta_13TeV", "lnN", SystMap<>::init(1.005));
-  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_lumi_ghosts-satellites_13TeV", "lnN", SystMap<>::init(1.004));
+    .AddSyst(cb, "CMS_lumi_13TeV_BCC", "lnN", SystMap<>::init(1.002));
 
   // Pileup
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_Pileup_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_pileup", "shape", SystMap<>::init(1.0));
 
   // Trigger
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_Trigger_mutaue_2018_13TeV", "lnN", SystMap<>::init(1.02));
+    .AddSyst(cb, "CMS_eff_trigger_mutaue_2018", "lnN", SystMap<>::init(1.02));
   cb.cp().process({"ZTauTau"})
-    .AddSyst(cb, "CMS_Trigger_emb_mutaue_2018_13TeV", "lnN", SystMap<>::init(1.02));
+    .AddSyst(cb, "CMS_eff_trigger_emb_mutaue_2018", "lnN", SystMap<>::init(1.02));
   cb.cp().process({"ZTauTau"})
-    .AddSyst(cb, "CMS_selection_dimuon_emb_2018_13TeV", "lnN", SystMap<>::init(1.04));
+    .AddSyst(cb, "CMS_doublemutrg_2018", "lnN", SystMap<>::init(1.04));
 
   // Muon Efficiency
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
@@ -211,7 +209,7 @@ int main(int argc, char* argv[]){
   cb.cp().process({{"ZTauTau"}})
     .AddSyst(cb, "CMS_eff_m", "lnN", SystMap<>::init(1.01));
   cb.cp().process({{"ZTauTau"}})
-    .AddSyst(cb, "CMS_eff_emb_m", "lnN", SystMap<>::init(1.01732));
+    .AddSyst(cb, "CMS_eff_m_emb", "lnN", SystMap<>::init(1.01732));
 
   // Electron Efficiency
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
@@ -219,60 +217,60 @@ int main(int argc, char* argv[]){
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_eff_e", "lnN", SystMap<>::init(1.01));
   cb.cp().process({"ZTauTau"})
-    .AddSyst(cb, "CMS_eff_emb_e", "lnN", SystMap<>::init(1.01732));
+    .AddSyst(cb, "CMS_eff_e_emb", "lnN", SystMap<>::init(1.01732));
 
   // Muon Energy Scale
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_scale_m_etaLt1p2_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_m_etaLt1p2", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_scale_m_eta1p2to2p1_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_m_eta1p2to2p1", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_scale_m_eta2p1to2p4_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_m_eta2p1to2p4", "shape", SystMap<>::init(1.0));
 
   // Electron Energy Scale
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
-    .AddSyst(cb, "CMS_scale_e_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_e", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
-    .AddSyst(cb, "CMS_scale_e_emb_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_e_emb", "shape", SystMap<>::init(1.0));
 
   // Recoil Uncertainty
   cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
-    .AddSyst(cb, "CMS_scale_met_0Jet_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_met_0Jet_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
-    .AddSyst(cb, "CMS_reso_met_0Jet_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_res_met_0Jet_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
-    .AddSyst(cb, "CMS_scale_met_1Jet_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_met_1Jet_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
-    .AddSyst(cb, "CMS_reso_met_1Jet_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_res_met_1Jet_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
-    .AddSyst(cb, "CMS_scale_met_2Jet_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_met_2Jet_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
-    .AddSyst(cb, "CMS_reso_met_2Jet_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_res_met_2Jet_2018", "shape", SystMap<>::init(1.0));
 
   // Reweighting and b-tagging uncertainty
   cb.cp().process({"Zothers"})
-    .AddSyst(cb, "CMS_DYpTreweight_2018_13TeV", "shape", SystMap<>::init(1.0));
-  cb.cp().process({"TT", "T"})//.bin_id({2})
-    .AddSyst(cb, "CMS_eff_btag_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_dyShape_2018", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))//.bin_id({2})
+    .AddSyst(cb, "CMS_eff_b_2018", "shape", SystMap<>::init(1.0));
 
   // QCD estimation uncertainty
   cb.cp().process({"QCD"})
-    .AddSyst(cb, "CMS_QCD_0JetRate_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_qcd_0jet_rate_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process({"QCD"})
-    .AddSyst(cb, "CMS_QCD_1JetRate_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_qcd_1jet_rate_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process({"QCD"})
-    .AddSyst(cb, "CMS_QCD_2JetRate_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_qcd_2jet_rate_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process({"QCD"})
-    .AddSyst(cb, "CMS_QCD_0JetShape_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_qcd_0jet_shape_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process({"QCD"})
-    .AddSyst(cb, "CMS_QCD_1JetShape_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_qcd_1jet_shape_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process({"QCD"})
-    .AddSyst(cb, "CMS_QCD_2JetShape_2018_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_qcd_2jet_shape_2018", "shape", SystMap<>::init(1.0));
   cb.cp().process({"QCD"})
-    .AddSyst(cb, "CMS_QCD_Extrapolation_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_qcd_extrapolation", "shape", SystMap<>::init(1.0));
 
   // Jet Energy Scale and Resolution
-  TString JESNAMES[12] = {"CMS_Jes_JetAbsolute_13TeV", "CMS_Jes_JetAbsolute_2018_13TeV", "CMS_Jes_JetBBEC1_13TeV", "CMS_Jes_JetBBEC1_2018_13TeV", "CMS_Jes_JetFlavorQCD_13TeV", "CMS_Jes_JetEC2_13TeV", "CMS_Jes_JetEC2_2018_13TeV", "CMS_Jes_JetHF_13TeV", "CMS_Jes_JetHF_2018_13TeV", "CMS_Jes_JetRelativeBal_13TeV", "CMS_Jes_JetRelativeSample_13TeV", "CMS_Jer_2018_13TeV"};
+  TString JESNAMES[12] = {"CMS_scale_j_Absolute", "CMS_scale_j_Absolute_2018", "CMS_scale_j_BBEC1", "CMS_scale_j_BBEC1_2018", "CMS_scale_j_FlavorQCD", "CMS_scale_j_EC2", "CMS_scale_j_EC2_2018", "CMS_scale_j_HF", "CMS_scale_j_HF_2018", "CMS_scale_j_RelativeBal", "CMS_scale_j_RelativeSample_2018", "CMS_res_j_2018"};
   for (int i = 0; i < 12; i++){
     cb.cp().process({"TT", "T", "Diboson"})
       .AddSyst(cb, JESNAMES[i].Data(), "shape", SystMap<>::init(1.0));
@@ -280,13 +278,13 @@ int main(int argc, char* argv[]){
 
   // Unclustered Energy Scale
   cb.cp().process({"TT", "T", "Diboson"})
-    .AddSyst(cb, "CMS_MET_chargedUes_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_met_charged", "shape", SystMap<>::init(1.0));
   cb.cp().process({"TT", "T", "Diboson"})
-    .AddSyst(cb, "CMS_MET_ecalUes_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_met_ecal", "shape", SystMap<>::init(1.0));
   cb.cp().process({"TT", "T", "Diboson"})
-    .AddSyst(cb, "CMS_MET_hcalUes_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_met_hcal", "shape", SystMap<>::init(1.0));
   cb.cp().process({"TT", "T", "Diboson"})
-    .AddSyst(cb, "CMS_MET_hfUes_13TeV", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_met_hf", "shape", SystMap<>::init(1.0));
 
   cb.cp().backgrounds().ExtractShapes(aux_shapes + dirInput+"/"+inputFile+".root", "$BIN/$PROCESS", "$BIN/$PROCESS_$SYSTEMATIC");
   cb.cp().signals().ExtractShapes(aux_shapes + dirInput+"/"+inputFile+".root", "$BIN/$PROCESS$MASS", "$BIN/$PROCESS$MASS_$SYSTEMATIC");

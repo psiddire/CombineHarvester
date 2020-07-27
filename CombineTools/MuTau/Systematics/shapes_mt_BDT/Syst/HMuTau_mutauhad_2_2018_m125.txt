@@ -1,0 +1,17 @@
+# Datacard produced by CombineHarvester with git status: analysis-HIG-16-006-freeze-080416-806-g6af279a-dirty
+imax    1 number of bins
+jmax    12 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2018_m125.input.root HMuTau_mutauhad_2_2018/$PROCESS HMuTau_mutauhad_2_2018/$PROCESS_$SYSTEMATIC
+shapes LFVGG HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2018_m125.input.root HMuTau_mutauhad_2_2018/LFVGG$MASS HMuTau_mutauhad_2_2018/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2018_m125.input.root HMuTau_mutauhad_2_2018/LFVVBF$MASS HMuTau_mutauhad_2_2018/LFVVBF$MASS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          HMuTau_mutauhad_2_2018 
+observation  75730.9139      
+--------------------------------------------------------------------------------
+bin                                                      HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 HMuTau_mutauhad_2_2018 
+process                                                  ggH_htt         qqH_htt         ggH_hww         qqH_hww         Zothers         EWK             TT              T               Diboson         Fakes           ZTauTau         LFVGG           LFVVBF          
+process                                                  1               2               3               4               5               6               7               8               9               10              11              -1              0               
+rate                                                     446.299         50.9302         32.5278         5.01708         1822.01         597.226         3250.15         1136.57         2347.01         34047.1         30290.1         691.376         74.0534         
+--------------------------------------------------------------------------------

@@ -1,0 +1,17 @@
+# Datacard produced by CombineHarvester with git status: analysis-HIG-16-006-freeze-080416-806-g6af279a-dirty
+imax    1 number of bins
+jmax    12 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * HETau_etauhad_4_2018 HETau_etauhad_2018_m125.input.root HETau_etauhad_4_2018/$PROCESS HETau_etauhad_4_2018/$PROCESS_$SYSTEMATIC
+shapes LFVGG HETau_etauhad_4_2018 HETau_etauhad_2018_m125.input.root HETau_etauhad_4_2018/LFVGG$MASS HETau_etauhad_4_2018/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF HETau_etauhad_4_2018 HETau_etauhad_2018_m125.input.root HETau_etauhad_4_2018/LFVVBF$MASS HETau_etauhad_4_2018/LFVVBF$MASS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          HETau_etauhad_4_2018 
+observation  1192.9986       
+--------------------------------------------------------------------------------
+bin                                                      HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 HETau_etauhad_4_2018 
+process                                                  ggH_htt         qqH_htt         ggH_hww         qqH_hww         Zothers         EWK             TT              T               Diboson         Fakes           ZTauTau         LFVGG           LFVVBF          
+process                                                  1               2               3               4               5               6               7               8               9               10              11              -1              0               
+rate                                                     12.0061         26.4408         0.845726        2.75954         47.3049         48.1219         160.865         34.3994         37.0911         377.543         410.027         16.4691         37.2645         
+--------------------------------------------------------------------------------

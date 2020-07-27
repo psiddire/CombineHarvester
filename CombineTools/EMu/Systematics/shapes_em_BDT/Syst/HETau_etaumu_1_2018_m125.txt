@@ -1,0 +1,17 @@
+# Datacard produced by CombineHarvester with git status: analysis-HIG-16-006-freeze-080416-806-g6af279a-dirty
+imax    1 number of bins
+jmax    13 number of processes minus 1
+kmax    * number of nuisance parameters
+--------------------------------------------------------------------------------
+shapes * HETau_etaumu_1_2018 HETau_etaumu_2018_m125.input.root HETau_etaumu_1_2018/$PROCESS HETau_etaumu_1_2018/$PROCESS_$SYSTEMATIC
+shapes LFVGG HETau_etaumu_1_2018 HETau_etaumu_2018_m125.input.root HETau_etaumu_1_2018/LFVGG$MASS HETau_etaumu_1_2018/LFVGG$MASS_$SYSTEMATIC
+shapes LFVVBF HETau_etaumu_1_2018 HETau_etaumu_2018_m125.input.root HETau_etaumu_1_2018/LFVVBF$MASS HETau_etaumu_1_2018/LFVVBF$MASS_$SYSTEMATIC
+--------------------------------------------------------------------------------
+bin          HETau_etaumu_1_2018 
+observation  191755.7827     
+--------------------------------------------------------------------------------
+bin                                         HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 HETau_etaumu_1_2018 
+process                                     ggH_htt         qqH_htt         ggH_hww         qqH_hww         Zothers         EWK             W               TT              T               Diboson         QCD             ZTauTau         LFVGG           LFVVBF          
+process                                     1               2               3               4               5               6               7               8               9               10              11              12              -1              0               
+rate                                        466.652         5.1721          1239.91         13.5418         1387.36         38.3411         5245.17         6993.97         3244.91         34316.4         30372.5         111379          711.745         7.54161         
+--------------------------------------------------------------------------------

@@ -1,0 +1,234 @@
+{
+    "largeNormEff": {
+        "CMS_eff_b_2018": {
+            "Name1": {
+                "TT": {
+                    "value_d": 0.876,
+                    "value_u": 1.13198
+                }
+            },
+            "Name2": {
+                "T": {
+                    "value_d": 0.892133,
+                    "value_u": 1.11071
+                },
+                "TT": {
+                    "value_d": 0.854075,
+                    "value_u": 1.15721
+                }
+            },
+            "Name3": {
+                "T": {
+                    "value_d": 0.882688,
+                    "value_u": 1.12194
+                },
+                "TT": {
+                    "value_d": 0.823625,
+                    "value_u": 1.19303
+                }
+            },
+            "Name4": {
+                "TT": {
+                    "value_d": 0.857726,
+                    "value_u": 1.15256
+                }
+            }
+        },
+        "CMS_etauFR_barrel_2018": {
+            "Name1": {
+                "Zothers": {
+                    "value_d": 1.1227,
+                    "value_u": 0.877296
+                }
+            },
+            "Name2": {
+                "Zothers": {
+                    "value_d": 1.10448,
+                    "value_u": 0.895523
+                }
+            }
+        },
+        "CMS_pileup": {
+            "Name4": {
+                "ggH_hww": {
+                    "value_d": 1.14776,
+                    "value_u": 0.860186
+                }
+            }
+        },
+        "CMS_scale_j_Absolute_2018": {
+            "Name4": {
+                "T": {
+                    "value_d": 1.10206,
+                    "value_u": 0.897936
+                }
+            }
+        },
+        "CMS_scale_j_RelativeBal": {
+            "Name4": {
+                "T": {
+                    "value_d": 0.971167,
+                    "value_u": 1.11288
+                }
+            }
+        },
+        "QCDscale_ggH_ACCEPT": {
+            "Name4": {
+                "ggH_htt": {
+                    "value_d": 0.0,
+                    "value_u": 0.897
+                }
+            }
+        },
+        "norm_EWK": {
+            "Name1": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name2": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name3": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name4": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes": {
+            "Name1": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            },
+            "Name2": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            },
+            "Name3": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            },
+            "Name4": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.3
+                }
+            }
+        },
+        "norm_Fakes_etauh_0jet": {
+            "Name1": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes_etauh_1jet": {
+            "Name2": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes_etauh_2jet_gg": {
+            "Name3": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_Fakes_etauh_2jet_vbf": {
+            "Name4": {
+                "Fakes": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        }
+    },
+    "smallShapeEff": {
+        "CMS_scale_t_1prong_2018": {
+            "Name4": {
+                "ZTauTau": {
+                    "diff_d": 1.2150625436074447e-05,
+                    "diff_u": 1.1046729488678298e-05
+                }
+            }
+        },
+        "CMS_scale_t_emb_1prong_2018": {
+            "Name4": {
+                "ZTauTau": {
+                    "diff_d": 1.2150625436074447e-05,
+                    "diff_u": 1.1046729488678298e-05
+                }
+            }
+        }
+    },
+    "uncertVarySameDirect": {
+        "CMS_scale_e": {
+            "Name1": {
+                "Diboson": {
+                    "value_d": 1.0025489647988413,
+                    "value_u": 1.0000011792404748
+                },
+                "TT": {
+                    "value_d": 0.9990073993870106,
+                    "value_u": 0.9994609793503276
+                }
+            },
+            "Name2": {
+                "EWK": {
+                    "value_d": 0.9999999936549031,
+                    "value_u": 0.9999999796554035
+                },
+                "LFVGG": {
+                    "value_d": 0.9999438817812241,
+                    "value_u": 0.9999228640927288
+                },
+                "LFVVBF": {
+                    "value_d": 0.9998947928413926,
+                    "value_u": 0.9996228501846688
+                },
+                "qqH_hww": {
+                    "value_d": 0.999999989426427,
+                    "value_u": 0.999999989426427
+                }
+            },
+            "Name3": {
+                "EWK": {
+                    "value_d": 1.0000000411957115,
+                    "value_u": 1.0034659358501026
+                },
+                "ggH_htt": {
+                    "value_d": 0.9998816184066202,
+                    "value_u": 0.9999999840882838
+                }
+            },
+            "Name4": {
+                "TT": {
+                    "value_d": 0.999957613472643,
+                    "value_u": 0.998149500893071
+                }
+            }
+        }
+    }
+}

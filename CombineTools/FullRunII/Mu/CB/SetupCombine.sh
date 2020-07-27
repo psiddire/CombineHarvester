@@ -1,3 +1,8 @@
+cp higgsCombineTest.AsymptoticLimits.0Jet.mH125.root Combine/
+cp higgsCombineTest.AsymptoticLimits.1Jet.mH125.root Combine/
+cp higgsCombineTest.AsymptoticLimits.2JetGG.mH125.root Combine/
+cp higgsCombineTest.AsymptoticLimits.2JetVBF.mH125.root Combine/
+cp higgsCombineTest.AsymptoticLimits.Comb.mH125.root Combine/
 cp ~/CMSSW_10_2_15/src/CombineHarvester/CombineTools/FullRunII/MuTau/CB/higgsCombineTest.AsymptoticLimits.0Jet.mH125.root Combine/higgsCombineTest.AsymptoticLimits.mt1.mH125.root
 cp ~/CMSSW_10_2_15/src/CombineHarvester/CombineTools/FullRunII/MuTau/CB/higgsCombineTest.AsymptoticLimits.1Jet.mH125.root Combine/higgsCombineTest.AsymptoticLimits.mt2.mH125.root
 cp ~/CMSSW_10_2_15/src/CombineHarvester/CombineTools/FullRunII/MuTau/CB/higgsCombineTest.AsymptoticLimits.2JetGG.mH125.root Combine/higgsCombineTest.AsymptoticLimits.mt3.mH125.root

@@ -1,0 +1,168 @@
+{
+    "largeNormEff": {
+        "CMS_eff_b_2018": {
+            "Name1": {
+                "TT": {
+                    "value_d": 0.88874,
+                    "value_u": 1.11777
+                }
+            },
+            "Name2": {
+                "TT": {
+                    "value_d": 0.855895,
+                    "value_u": 1.15517
+                }
+            },
+            "Name3": {
+                "T": {
+                    "value_d": 0.886372,
+                    "value_u": 1.1185
+                },
+                "TT": {
+                    "value_d": 0.83122,
+                    "value_u": 1.18476
+                }
+            },
+            "Name4": {
+                "TT": {
+                    "value_d": 0.868708,
+                    "value_u": 1.14144
+                }
+            }
+        },
+        "CMS_pileup": {
+            "Name1": {
+                "W": {
+                    "value_d": 1.17733,
+                    "value_u": 0.851803
+                }
+            }
+        },
+        "CMS_res_j_2018": {
+            "Name4": {
+                "T": {
+                    "value_d": 1.01005,
+                    "value_u": 0.844805
+                }
+            }
+        },
+        "CMS_scale_met_2Jet_2018": {
+            "Name3": {
+                "W": {
+                    "value_d": 0.890493,
+                    "value_u": 1.10951
+                }
+            },
+            "Name4": {
+                "ggH_hww": {
+                    "value_d": 1.21605,
+                    "value_u": 0.826747
+                }
+            }
+        },
+        "CMS_scale_met_hf": {
+            "Name4": {
+                "Diboson": {
+                    "value_d": 0.834822,
+                    "value_u": 1.16518
+                }
+            }
+        },
+        "norm_EWK": {
+            "Name1": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name2": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name3": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name4": {
+                "EWK": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        },
+        "norm_W": {
+            "Name1": {
+                "W": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name2": {
+                "W": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name3": {
+                "W": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            },
+            "Name4": {
+                "W": {
+                    "value_d": 0.0,
+                    "value_u": 1.1
+                }
+            }
+        }
+    },
+    "uncertVarySameDirect": {
+        "CMS_scale_e": {
+            "Name1": {
+                "T": {
+                    "value_d": 1.0015333982188188,
+                    "value_u": 1.0000448652574352
+                },
+                "TT": {
+                    "value_d": 0.9997886187100581,
+                    "value_u": 0.9993854807778193
+                },
+                "qqH_hww": {
+                    "value_d": 0.9999999907704453,
+                    "value_u": 0.9999999969234817
+                }
+            },
+            "Name2": {
+                "qqH_hww": {
+                    "value_d": 0.999404679562313,
+                    "value_u": 0.9995402475708292
+                }
+            },
+            "Name3": {
+                "TT": {
+                    "value_d": 1.0003942570551725,
+                    "value_u": 1.0000091963323798
+                },
+                "qqH_htt": {
+                    "value_d": 1.000000031503246,
+                    "value_u": 1.0013208802240796
+                }
+            },
+            "Name4": {
+                "ggH_htt": {
+                    "value_d": 0.9999999733505509,
+                    "value_u": 0.9999999749656691
+                },
+                "qqH_hww": {
+                    "value_d": 0.9999999703840792,
+                    "value_u": 0.998808174633585
+                }
+            }
+        }
+    }
+}
