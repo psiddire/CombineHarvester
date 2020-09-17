@@ -209,7 +209,10 @@ int main(int argc, char* argv[]){
     .AddSyst(cb, "CMS_lumi_13TeV_GS", "lnN", SystMap<>::init(1.001));
 
   // Pileup, Prefiring
-  AddShapes({"CMS_pileup", "CMS_prefiring"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_pileup", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_prefiring", "shape", SystMap<>::init(1.0));
 
   // Trigger
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
@@ -239,14 +242,31 @@ int main(int argc, char* argv[]){
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
     .AddSyst(cb, "CMS_scale_e", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
-    .AddSyst(cb, "CMS_scale_e_emb", "shape", SystMap<>::init(1.0));
-  // AddShapes({"CMS_scale_e"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+    .AddSyst(cb, "CMS_scale_e_barrel_emb", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"ZTauTau"})
+    .AddSyst(cb, "CMS_scale_e_endcap_emb", "shape", SystMap<>::init(1.0));
 
   // Muon Energy Scale
-  AddShapes({"CMS_scale_m_etaLt1p2", "CMS_scale_m_eta1p2to2p1", "CMS_scale_m_eta2p1to2p4"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_m_etaLt1p2", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_m_eta1p2to2p1", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_m_eta2p1to2p4", "shape", SystMap<>::init(1.0));
 
   // Recoil Uncertainty
-  AddShapes({"CMS_scale_met_0Jet_2017", "CMS_res_met_0Jet_2017", "CMS_scale_met_1Jet_2017", "CMS_res_met_1Jet_2017", "CMS_scale_met_2Jet_2017", "CMS_res_met_2Jet_2017"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, rec_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_scale_met_0Jet_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_res_met_0Jet_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_scale_met_1Jet_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_res_met_1Jet_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_scale_met_2Jet_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_res_met_2Jet_2017", "shape", SystMap<>::init(1.0));
 
   // Reweighting and b-tagging uncertainty
   cb.cp().process({"Zothers"})
@@ -255,13 +275,33 @@ int main(int argc, char* argv[]){
   AddShapes({"CMS_eff_b_2017"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
 
   // QCD estimation uncertainty
-  AddShapes({"CMS_qcd_0jet_rate_2017", "CMS_qcd_1jet_rate_2017", "CMS_qcd_2jet_rate_2017", "CMS_qcd_0jet_shape_2017", "CMS_qcd_1jet_shape_2017", "CMS_qcd_2jet_shape_2017", "CMS_qcd_extrapolation"}, {"QCD"}, &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process({"QCD"})
+    .AddSyst(cb, "CMS_qcd_0jet_rate_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"QCD"})
+    .AddSyst(cb, "CMS_qcd_1jet_rate_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"QCD"})
+    .AddSyst(cb, "CMS_qcd_2jet_rate_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"QCD"})
+    .AddSyst(cb, "CMS_qcd_0jet_shape_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"QCD"})
+    .AddSyst(cb, "CMS_qcd_1jet_shape_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"QCD"})
+    .AddSyst(cb, "CMS_qcd_2jet_shape_2017", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"QCD"})
+    .AddSyst(cb, "CMS_qcd_extrapolation", "shape", SystMap<>::init(1.0));
 
   // Jet Energy Scale and Resolution
   AddShapes({"CMS_scale_j_Absolute", "CMS_scale_j_Absolute_2017", "CMS_scale_j_BBEC1", "CMS_scale_j_BBEC1_2017", "CMS_scale_j_FlavorQCD", "CMS_scale_j_EC2", "CMS_scale_j_EC2_2017", "CMS_scale_j_HF", "CMS_scale_j_HF_2017", "CMS_scale_j_RelativeBal", "CMS_scale_j_RelativeSample_2017", "CMS_res_j_2017"}, {"TT", "T", "Diboson"}, &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
 
   // Unclustered Energy Scale
-  AddShapes({"CMS_scale_met_charged", "CMS_scale_met_ecal", "CMS_scale_met_hcal", "CMS_scale_met_hf"}, {"TT", "T", "Diboson"}, &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process({"TT", "T", "Diboson"})
+    .AddSyst(cb, "CMS_scale_met_charged", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"TT", "T", "Diboson"})
+    .AddSyst(cb, "CMS_scale_met_ecal", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"TT", "T", "Diboson"})
+    .AddSyst(cb, "CMS_scale_met_hcal", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"TT", "T", "Diboson"})
+    .AddSyst(cb, "CMS_scale_met_hf", "shape", SystMap<>::init(1.0));
 
   cb.cp().backgrounds().ExtractShapes(aux_shapes + dirInput+"/"+inputFile+".root", "$BIN/$PROCESS", "$BIN/$PROCESS_$SYSTEMATIC");
   cb.cp().signals().ExtractShapes(aux_shapes + dirInput+"/"+inputFile+".root", "$BIN/$PROCESS$MASS", "$BIN/$PROCESS$MASS_$SYSTEMATIC");
