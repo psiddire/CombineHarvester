@@ -224,7 +224,9 @@ int main(int argc, char* argv[]){
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
     .AddSyst(cb, "CMS_scale_e", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
-    .AddSyst(cb, "CMS_scale_e_emb", "shape", SystMap<>::init(1.0));
+    .AddSyst(cb, "CMS_scale_e_barrel_emb", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"ZTauTau"})
+    .AddSyst(cb, "CMS_scale_e_endcap_emb", "shape", SystMap<>::init(1.0));
 
   // Tau Efficiency
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))

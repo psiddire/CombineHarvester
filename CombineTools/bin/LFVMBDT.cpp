@@ -49,6 +49,7 @@ int main(int argc, char* argv[]){
  double intLumi = atof(lumi.c_str());
  printf("Luminosity: %.2f",intLumi);
 
+ double DATA[9];
  double MEDIAN[9];
  double ERR2DOWN[9];
  double ERRDOWN[9];
@@ -80,6 +81,7 @@ int main(int argc, char* argv[]){
 	 if(k==1) ERRDOWN[i] = limit;
 	 if(k==3) ERRUP[i] = limit;
 	 if(k==4) ERR2UP[i] = limit;
+	 if(k==5) DATA[i] = limit;
        }
    }
 
@@ -125,6 +127,7 @@ int main(int argc, char* argv[]){
  double erry[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 
  // Reordering to keep most of the old macro
+ double DATAplot[9] = {DATA[8], DATA[7], DATA[6], DATA[5], DATA[4], DATA[3], DATA[2], DATA[1], DATA[0]};
  double MEDIANplot[9] = {MEDIAN[8], MEDIAN[7], MEDIAN[6], MEDIAN[5], MEDIAN[4], MEDIAN[3], MEDIAN[2], MEDIAN[1], MEDIAN[0]};
  double ERR2DOWNplot[9] = {ERR2DOWN[8], ERR2DOWN[7], ERR2DOWN[6], ERR2DOWN[5], ERR2DOWN[4], ERR2DOWN[3], ERR2DOWN[2], ERR2DOWN[1], ERR2DOWN[0]};
  double ERRDOWNplot[9] = {ERRDOWN[8], ERRDOWN[7], ERRDOWN[6], ERRDOWN[5], ERRDOWN[4], ERRDOWN[3], ERRDOWN[2], ERRDOWN[1], ERRDOWN[0]};
@@ -147,7 +150,7 @@ int main(int argc, char* argv[]){
  TString channels2[9];
  for(int i = 0; i < 9; i++)
    {
-     channels2[i] = Form("#splitline{%s}{ #scale[0.8]{(%1.2f%%)}} ", channels[i].c_str(), MEDIANplot[i]);
+     channels2[i] = Form("#splitline{%s}{ #splitline{#scale[0.8]{Exp: %1.2f%%}}{#scale[0.8]{Obs: %1.2f%%}}} ", channels[i].c_str(), MEDIANplot[i], DATAplot[i]);
    }
 
  PLOTLIMIT->cd();
@@ -177,6 +180,10 @@ int main(int argc, char* argv[]){
  GRAPHMEDIAN->SetLineColor(kBlue+2); GRAPHMEDIAN->SetMarkerStyle(5); GRAPHMEDIAN->SetMarkerColor(kBlue+2); GRAPHMEDIAN->SetMarkerSize(1.5); GRAPHMEDIAN->SetLineWidth(1);
  GRAPHMEDIAN->Draw("P,sames");
 
+ TGraphAsymmErrors *GRAPHDATA = new TGraphAsymmErrors(9, DATAplot, y, 0, 0, erry, erry);
+ GRAPHDATA->SetLineColor(kBlue+2); GRAPHDATA->SetMarkerStyle(8); GRAPHDATA->SetMarkerColor(kBlue+2); GRAPHDATA->SetMarkerSize(0.5); GRAPHDATA->SetLineWidth(1);
+ GRAPHDATA->Draw("P,sames");
+
  TLine *lineV = new TLine(0, 0, 0, 9);
  lineV->SetLineStyle(kDotted);
  lineV->SetLineColor(kGray);
@@ -194,6 +201,7 @@ int main(int argc, char* argv[]){
  leg->SetBorderSize(0);
  TLegendEntry *entry;
  leg->SetHeader(label.c_str());
+ entry=leg->AddEntry(GRAPHDATA, "Observed", "p");
  entry=leg->AddEntry(GRAPHMEDIAN, "Median expected", "p");
  entry=leg->AddEntry("NULL", "68% expected", "f");
  entry->SetFillColor(kGreen+1);
