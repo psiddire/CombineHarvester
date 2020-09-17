@@ -206,7 +206,10 @@ int main(int argc, char* argv[]){
     .AddSyst(cb, "CMS_lumi_13TeV_GS", "lnN", SystMap<>::init(1.004));
 
   // Pileup, Prefiring
-  AddShapes({"CMS_pileup", "CMS_prefiring"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_pileup", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_prefiring", "shape", SystMap<>::init(1.0));
 
   // Trigger
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
@@ -229,47 +232,76 @@ int main(int argc, char* argv[]){
     .AddSyst(cb, "CMS_scale_m_etaLt1p2", "shape", SystMap<>::init(1.0));
   cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
     .AddSyst(cb, "CMS_scale_m_eta1p2to2p1", "shape", SystMap<>::init(1.0));
-  // AddShapes({"CMS_scale_m_etaLt1p2", "CMS_scale_m_eta1p2to2p1"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
 
   // Tau Efficiency
-  AddShapes({"CMS_eff_t_pt30to35_2016", "CMS_eff_t_pt35to40_2016", "CMS_eff_t_ptgt40_2016"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_eff_t_pt30to35_2016", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_eff_t_pt30to35_2016", "shape", SystMap<>::init(0.5));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_eff_t_emb_pt30to35_2016", "shape", SystMap<>::init(0.866));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_eff_t_pt35to40_2016", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_eff_t_pt35to40_2016", "shape", SystMap<>::init(0.5));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_eff_t_emb_pt35to40_2016", "shape", SystMap<>::init(0.866));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_eff_t_ptgt40_2016", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_eff_t_ptgt40_2016", "shape", SystMap<>::init(0.5));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_eff_t_emb_ptgt40_2016", "shape", SystMap<>::init(0.866));
 
   // Tau Energy Scale
-  AddShapes({"CMS_scale_t_1prong_2016", "CMS_scale_t_1prong1pizero_2016", "CMS_scale_t_3prong_2016", "CMS_scale_t_3prong1pizero_2016"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_t_1prong_2016", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_scale_t_1prong_2016", "shape", SystMap<>::init(0.5));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_scale_t_emb_1prong_2016", "shape", SystMap<>::init(0.866));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_t_1prong1pizero_2016", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_scale_t_1prong1pizero_2016", "shape", SystMap<>::init(0.5));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_scale_t_emb_1prong1pizero_2016", "shape", SystMap<>::init(0.866));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_t_3prong_2016", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_scale_t_3prong_2016", "shape", SystMap<>::init(0.5));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_scale_t_emb_3prong_2016", "shape", SystMap<>::init(0.866));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_t_3prong1pizero_2016", "shape", SystMap<>::init(1.0));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_scale_t_3prong1pizero_2016", "shape", SystMap<>::init(0.5));
   cb.cp().process({"ZTauTau"})
     .AddSyst(cb, "CMS_scale_t_emb_3prong1pizero_2016", "shape", SystMap<>::init(0.866));
 
   // Tracking
-  AddShapes({"CMS_tau_tracking_prong", "CMS_tau_tracking_prong_2016", "CMS_tau_tracking_pizero", "CMS_tau_tracking_pizero_2016"}, {"ZTauTau"}, &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process({"ZTauTau"})
+    .AddSyst(cb, "CMS_tau_tracking_prong", "shape", SystMap<>::init(0.5));
+  cb.cp().process({"ZTauTau"})
+    .AddSyst(cb, "CMS_tau_tracking_prong_2016", "shape", SystMap<>::init(0.866));
+  cb.cp().process({"ZTauTau"})
+    .AddSyst(cb, "CMS_tau_tracking_pizero", "shape", SystMap<>::init(0.5));
+  cb.cp().process({"ZTauTau"})
+    .AddSyst(cb, "CMS_tau_tracking_pizero_2016", "shape", SystMap<>::init(0.866));
 
   // Recoil Uncertainty
-  AddShapes({"CMS_scale_met_0Jet_2016", "CMS_res_met_0Jet_2016", "CMS_scale_met_1Jet_2016", "CMS_res_met_1Jet_2016", "CMS_scale_met_2Jet_2016", "CMS_res_met_2Jet_2016"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, rec_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_scale_met_0Jet_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_res_met_0Jet_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_scale_met_1Jet_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_res_met_1Jet_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_scale_met_2Jet_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, rec_procs}))
+    .AddSyst(cb, "CMS_res_met_2Jet_2016", "shape", SystMap<>::init(1.0));
 
   // Reweighting and b-tagging uncertainty
   cb.cp().process({"Zothers"})
@@ -278,16 +310,38 @@ int main(int argc, char* argv[]){
   AddShapes({"CMS_eff_b_2016"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
 
   // Muon Faking Tau
-  AddShapes({"CMS_mutauFR_etaLt0p4_2016", "CMS_mutauFR_eta0p4to0p8_2016", "CMS_mutauFR_eta0p8to1p2_2016", "CMS_mutauFR_eta1p2to1p7_2016", "CMS_mutauFR_etaGt1p7_2016"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_mutauFR_etaLt0p4_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_mutauFR_eta0p4to0p8_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_mutauFR_eta0p8to1p2_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_mutauFR_eta1p2to1p7_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_mutauFR_etaGt1p7_2016", "shape", SystMap<>::init(1.0));
 
   // Electron Faking Tau
-  AddShapes({"CMS_etauFR_barrel_2016", "CMS_etauFR_endcap_2016"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_etauFR_barrel_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_etauFR_endcap_2016", "shape", SystMap<>::init(1.0));
 
   // Muon Faking Tau ES
-  AddShapes({"CMS_scale_mutauFR_1prong_2016", "CMS_scale_mutauFR_1prong1pizero_2016"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_mutauFR_1prong_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_mutauFR_1prong1pizero_2016", "shape", SystMap<>::init(1.0));
 
   // Electron Faking Tau ES
-  AddShapes({"CMS_scale_etauFR_barrel_1prong_2016", "CMS_scale_etauFR_barrel_1prong1pizero_2016", "CMS_scale_etauFR_endcap_1prong_2016", "CMS_scale_etauFR_endcap_1prong1pizero_2016"}, ch::JoinStr({{"LFVGG", "LFVVBF"}, mc_procs}), &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_etauFR_barrel_1prong_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_etauFR_barrel_1prong1pizero_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_etauFR_endcap_1prong_2016", "shape", SystMap<>::init(1.0));
+  cb.cp().process(ch::JoinStr({sig_procs, mc_procs}))
+    .AddSyst(cb, "CMS_scale_etauFR_endcap_1prong1pizero_2016", "shape", SystMap<>::init(1.0));
 
   // Fake background Uncertainty
   cb.cp().process({"Fakes"})
@@ -328,13 +382,19 @@ int main(int argc, char* argv[]){
     .AddSyst(cb, "CMS_muFR_p0_2016", "shape", SystMap<>::init(1.0));
   cb.cp().process({"Fakes"})
     .AddSyst(cb, "CMS_muFR_p1_2016", "shape", SystMap<>::init(1.0));
-  // AddShapes({"CMS_tauFR_p0_dm0_B_2016", "CMS_tauFR_p0_dm1_B_2016", "CMS_tauFR_p0_dm10_B_2016", "CMS_tauFR_p0_dm11_B_2016", "CMS_tauFR_p0_dm0_E_2016", "CMS_tauFR_p0_dm1_E_2016", "CMS_tauFR_p0_dm10_E_2016", "CMS_tauFR_p0_dm11_E_2016", "CMS_tauFR_p1_dm0_B_2016", "CMS_tauFR_p1_dm1_B_2016", "CMS_tauFR_p1_dm10_B_2016", "CMS_tauFR_p1_dm11_B_2016", "CMS_tauFR_p1_dm0_E_2016", "CMS_tauFR_p1_dm1_E_2016", "CMS_tauFR_p1_dm10_E_2016", "CMS_tauFR_p1_dm11_E_2016", "CMS_muFR_p0_2016", "CMS_muFR_p1_2016"}, {"Fakes"}, &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
 
   // Jet Energy Scale and Resolution
   AddShapes({"CMS_scale_j_Absolute", "CMS_scale_j_Absolute_2016", "CMS_scale_j_BBEC1", "CMS_scale_j_BBEC1_2016", "CMS_scale_j_FlavorQCD", "CMS_scale_j_EC2", "CMS_scale_j_EC2_2016", "CMS_scale_j_HF", "CMS_scale_j_HF_2016", "CMS_scale_j_RelativeBal", "CMS_scale_j_RelativeSample_2016", "CMS_res_j_2016"}, {"TT", "T", "Diboson"}, &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
 
   // Unclustered Energy Scale
-  AddShapes({"CMS_scale_met_charged", "CMS_scale_met_ecal", "CMS_scale_met_hcal", "CMS_scale_met_hf"}, {"TT", "T", "Diboson"}, &cb, TheFile, {"0jet", "1jet", "2jet_gg", "2jet_vbf"});
+  cb.cp().process({"TT", "T", "Diboson"})
+    .AddSyst(cb, "CMS_scale_met_charged", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"TT", "T", "Diboson"})
+    .AddSyst(cb, "CMS_scale_met_ecal", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"TT", "T", "Diboson"})
+    .AddSyst(cb, "CMS_scale_met_hcal", "shape", SystMap<>::init(1.0));
+  cb.cp().process({"TT", "T", "Diboson"})
+    .AddSyst(cb, "CMS_scale_met_hf", "shape", SystMap<>::init(1.0));
 
   cb.cp().backgrounds().ExtractShapes(aux_shapes + dirInput+"/"+inputFile+".root", "$BIN/$PROCESS", "$BIN/$PROCESS_$SYSTEMATIC");
   cb.cp().signals().ExtractShapes(aux_shapes + dirInput+"/"+inputFile+".root", "$BIN/$PROCESS$MASS", "$BIN/$PROCESS$MASS_$SYSTEMATIC");

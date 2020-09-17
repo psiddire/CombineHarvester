@@ -41,7 +41,7 @@ struct SigComponent {
 
 using namespace std;
 
-int main() {
+int main(int argc, char* argv[]) {
   bool do_ratio = true;
   bool do_logy = false;
 
@@ -50,11 +50,21 @@ int main() {
 
   string file = "bus.root";
   string base = "htt_em_0_8TeV";
+
+  if (argc > 1)
+    {
+      int count=0;
+      for (count = 1; count < argc; count++)
+        {
+          if(strcmp(argv[count] ,"--i")==0) file=argv[count+1];
+          if(strcmp(argv[count] ,"--b")==0) base=argv[count+1];
+        }
+    }
+
   string bin_pre = base+"_prefit";
   string bin_post = base+"_postfit";
   TCanvas* canv = new TCanvas(base.c_str(), base.c_str());
   canv->cd();
-
 
   TFile file_(file.c_str(), "READ");
 
@@ -84,10 +94,10 @@ int main() {
   std::vector<TH1*> h = CreateAxisHists(2, &data);
   if (do_ratio) {
     SetupTwoPadSplitAsRatio(pads, h[0], h[1], "Ratio/Prefit", true, 0.65, 1.35);
-    UnitAxes(h[1]->GetXaxis(), h[0]->GetYaxis(), "m_{#tau#tau}", "GeV");
+    UnitAxes(h[1]->GetXaxis(), h[0]->GetYaxis(), "BDT Discriminator", "");
   } else {
     // h[0]->GetXaxis()->SetTitleOffset(1.0);
-    UnitAxes(h[0]->GetXaxis(), h[0]->GetYaxis(), "m_{#tau#tau}", "GeV");
+    UnitAxes(h[0]->GetXaxis(), h[0]->GetYaxis(), "BDT Discriminator", "");
   }
 
   // Can draw main axis now
@@ -126,8 +136,8 @@ int main() {
 
   FixTopRange(pads[0], GetPadYMax(pads[0]), 0.25);
   DrawCMSLogo(pads[0], "CMS", "Preliminary", 11, 0.045, 0.035, 1.2);
-  DrawTitle(pads[0], "19.7 fb^{-1} (8 TeV) + 4.9 fb^{-1} (7 TeV)", 3);
-  DrawTitle(pads[0], "H#rightarrow#tau#tau", 1);
+  DrawTitle(pads[0], "35.9 fb^{-1} (13 TeV)", 3);
+  DrawTitle(pads[0], "H#rightarrow#mu#tau_{e}", 1);
 
   if (do_ratio) {
     pads[1]->cd();
